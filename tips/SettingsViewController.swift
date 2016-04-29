@@ -66,7 +66,6 @@ class SettingsViewController: UIViewController {
         
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setBool(
-//            ((sender as! UISwitch).valueForKey("important")?.boolValue)!,
             (sender as! UISwitch).on,
             forKey: String(format:"%d", percent))
         defaults.synchronize()

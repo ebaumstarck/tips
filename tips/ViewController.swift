@@ -51,8 +51,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onEditingChanged(sender: AnyObject) {
-//        let tipPercentages = [0.15, 0.2, 0.25]
-//        let tipPercentage = tipPercentages[tipSelectorSegment.selectedSegmentIndex]
         let displayedPercentage = tipSelectorSegment.titleForSegmentAtIndex(tipSelectorSegment.selectedSegmentIndex)
         let percentage = Int(
             (displayedPercentage?.substringToIndex(
@@ -61,8 +59,6 @@ class ViewController: UIViewController {
         let billAmount = NSString(string: billField.text!).doubleValue
         let tip = billAmount * 0.01 * Double(percentage!)
         let total = billAmount + tip
-//    tipSelectorSegment.insertSegmentWithTitle("FOO", atIndex: 3, animated: true)
-//        tipSelectorSegment.removese
         
         tipLabel.text = String(format: "$%.02f", tip)
         totalLabel.text = String(format: "$%.02f", total)
